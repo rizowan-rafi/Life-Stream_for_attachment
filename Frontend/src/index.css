@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+* {
+font-family: 'Manrope';
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f6;
+  color: #111827;
+}
