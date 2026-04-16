@@ -5,6 +5,7 @@ import axiosInstance from "../../utilities/axiosInstance";
 import { API_PATHS } from "../../utilities/apiPath";
 import { useUser } from "../../context/UserContext";
 import Swal from "sweetalert2"; // Added SweetAlert2
+import { Helmet } from "react-helmet-async";
 
 const SignIn = () => {
     const navigate = useNavigate();
@@ -81,6 +82,13 @@ const SignIn = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Sign In | BloodConnect</title>
+                <meta
+                    name="description"
+                    content="Access your BloodConnect account to manage your donor profile, update availability, or view your donation history."
+                />
+            </Helmet>
             <Navbar />
             <div className="bg-[#f8f6f6] min-h-[calc(100vh-80px)] flex items-center justify-center px-6 py-12">
                 <div className="w-full max-w-110 bg-white p-8 rounded-2xl shadow-md">

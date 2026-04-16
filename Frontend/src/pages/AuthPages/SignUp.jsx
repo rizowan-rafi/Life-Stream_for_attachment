@@ -5,6 +5,7 @@ import axiosInstance from "../../utilities/axiosInstance";
 import { sendOTP } from "../../services/firebaseAuthService";
 import { API_PATHS } from "../../utilities/apiPath";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const SignUp = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
@@ -90,6 +91,13 @@ if (registrationResponse?.data?.success) {
 
     return (
         <div className="bg-[#f8f6f6] min-h-screen">
+            <Helmet>
+                <title>Become a Donor | BloodConnect</title>
+                <meta
+                    name="description"
+                    content="Join our community of life-savers. Register as a blood donor today and help save lives in your local community."
+                />
+            </Helmet>
             {/* 1. Navbar added here */}
             <Navbar />
 

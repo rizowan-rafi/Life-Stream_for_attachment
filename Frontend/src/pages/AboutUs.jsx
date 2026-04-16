@@ -1,10 +1,18 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
     return (
         <div className="bg-[#f8f6f6] min-h-screen">
+            <Helmet>
+                <title>About Us | BloodConnect</title>
+                <meta
+                    name="description"
+                    content="Learn about the mission of BloodConnect. We are a student-led initiative from RUET dedicated to bridging the gap between blood donors and those in need in Rajshahi and beyond."
+                />
+            </Helmet>
             <Navbar />
 
             <main>

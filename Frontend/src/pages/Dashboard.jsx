@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { useUser } from "../context/UserContext";
 import axiosInstance from "../utilities/axiosInstance";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 // --- Helper Components ---
 
@@ -132,6 +133,13 @@ function EditProfile({ user, onBack, onUpdateSuccess }) {
 
     return (
         <main className="bg-[#f8f6f6] p-3 pt-18 flex justify-center w-full min-h-screen">
+            <Helmet>
+                <title>My Profile | BloodConnect</title>
+                <meta
+                    name="description"
+                    content="Manage your BloodConnect donor profile. Update your blood group, current location, and donation availability to help those in need."
+                />
+            </Helmet>
             <div className="max-w-3xl w-full grid gap-6 bg-white p-8 rounded-xl shadow-sm h-fit">
                 <h1 className="text-2xl font-bold">Edit Profile</h1>
                 <div className="grid gap-4">
