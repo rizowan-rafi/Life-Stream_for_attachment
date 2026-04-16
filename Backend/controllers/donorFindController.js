@@ -18,7 +18,8 @@ const donorFindController = async (req, res) => {
         const donors = await Donor.find({
             bloodGroup: searchBloodGroup,
             
-            location: { $regex: searchLocation, $options: "i" }
+            location: { $regex: searchLocation, $options: "i" },
+            currentlyAvailable:true
         }).select("-password -__v");
 
         return res.status(200).json({
