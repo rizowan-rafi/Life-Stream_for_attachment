@@ -42,6 +42,17 @@ app.use(cors({
 }));
 
 
+app.get('/', (req, res) => {
+    res.json({
+        message:"server is running"
+    })
+})
+
+app.get('/test', (req, res) => {
+    res.json({
+        message:"tesing the website"
+    })
+})
 // Health Checks endpoint 
 app.get('/health',healthLimiter,(req,res)=>{
     
