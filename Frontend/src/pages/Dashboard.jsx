@@ -18,6 +18,13 @@ function Profile({ user, onEdit, onToggleAvailability }) {
     };
     return (
         <div className="view-container flex-1 max-w-6xl mx-auto w-full p-4 lg:p-10">
+            <Helmet>
+                <title>My Profile | BloodConnect</title>
+                <meta
+                    name="description"
+                    content="Manage your BloodConnect donor profile. Update your blood group, current location, and donation availability to help those in need."
+                />
+            </Helmet>
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-8 bg-white rounded-xl shadow-sm border border-red-50">
                 <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                     <div className="flex flex-col justify-center">
